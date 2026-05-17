@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schema.org/ProfilePage",
+  "name": "Woon Jang",
+  "url": "https://woonjang.dev/",
+  "alternateName": "Woon",
+  "email": "mailto:dj4ngb0g0h@gmail.com",
+  "github": "https://github.com/wkddns40?tab=repositories",
+  "product": "https://untamedai.me",
+  "resumePdf": "https://woonjang.dev/resume/woon_jang.pdf",
+  "role": "Aspiring Manufacturing AI Data Systems Engineer (currently: Industrial telemetry + LLM-based service engineer)",
+  "focus": [
+    "Physical AI data systems",
+    "manufacturing AI workflows",
+    "industrial telemetry pipelines",
+    "LLM product operations"
+  ],
+  "proofCases": [
+    {
+      "id": "industrial-fleet-telemetry",
+      "type": "team",
+      "operationPeriod": "1 year 5 months",
+      "fleetSize": "700+ vehicles",
+      "publicDisclosure": "Operation period, fleet scale (700+ vehicles), own contribution, and 7,000 events/sec (7k TPS) heterogeneous asynchronous telemetry load-test level are public; production latency and per-tenant figures remain private under NDA.",
+      "ownContribution": [
+        "InfluxDB operations",
+        "mqtt to InfluxDB Converter refactoring",
+        "expression-evaluation visualization",
+        "Celery module operations"
+      ],
+      "system": [
+        "webhook ingest",
+        "Bridge InfluxDB raw hex landing / replay storage",
+        "multi-process converter",
+        "measurement InfluxDB",
+        "Celery batch",
+        "Avro / GCS output"
+      ],
+      "performanceEvidence": "Validated at 7,000 events/sec (7k TPS) heterogeneous asynchronous telemetry load-test level."
+    },
+    {
+      "id": "untamedai-llm-product",
+      "type": "solo",
+      "operationPeriod": "1 year",
+      "url": "https://untamedai.me",
+      "evidence": [
+        "solo plan / build / deploy / operate loop",
+        "2 production routes",
+        "free tier in production",
+        "paid tier with Polar payment flow built and validated end-to-end (no transactions yet)",
+        "token-cost monitoring",
+        "moderation loop"
+      ],
+      "stack": [
+        "Next.js",
+        "Python FastAPI",
+        "Supabase",
+        "PostgreSQL",
+        "Cloudflare",
+        "Claude Opus",
+        "GPT 5.x",
+        "Polar"
+      ]
+    }
+  ],
+  "transferablePrimitives": [
+    "fragmented stream reassembly",
+    "multi-source temporal alignment",
+    "schema-driven device decoding"
+  ],
+  "parserEndpoints": {
+    "htmlKo": "https://woonjang.dev/",
+    "htmlEn": "https://woonjang.dev/en",
+    "sitemap": "https://woonjang.dev/sitemap.xml",
+    "robots": "https://woonjang.dev/robots.txt"
+  }
+}

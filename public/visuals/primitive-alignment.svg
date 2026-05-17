@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" role="img" aria-labelledby="title">
+  <title id="title">Four asynchronous channels aligned at a common reference column.</title>
+  <style>
+    .track{stroke:#D8E1EA;stroke-width:1}.label{fill:#243244;font-size:10px}.dot{fill:#243244}.aligned{fill:#007C9E}.col{stroke:#007C9E;stroke-width:1.25;stroke-dasharray:3 3;opacity:.7}.pill{fill:#EEF3F7;stroke:#AEBBCC;stroke-width:1}.pill-label{fill:#243244;font-size:10px}
+  </style>
+  <text x="20" y="24" class="label">channel A</text>
+  <line x1="20" y1="30" x2="460" y2="30" class="track"/>
+  <circle cx="60" cy="30" r="3" class="dot"/><circle cx="115" cy="30" r="3" class="dot"/><circle cx="180" cy="30" r="3" class="dot"/><circle cx="240" cy="30" r="3" class="dot"/><circle cx="300" cy="30" r="3" class="dot"/><circle cx="360" cy="30" r="3" class="dot"/>
+  <text x="20" y="64" class="label">channel B</text>
+  <line x1="20" y1="70" x2="460" y2="70" class="track"/>
+  <circle cx="80" cy="70" r="3" class="dot"/><circle cx="150" cy="70" r="3" class="dot"/><circle cx="215" cy="70" r="3" class="dot"/><circle cx="290" cy="70" r="3" class="dot"/><circle cx="350" cy="70" r="3" class="dot"/>
+  <text x="20" y="104" class="label">channel C</text>
+  <line x1="20" y1="110" x2="460" y2="110" class="track"/>
+  <circle cx="45" cy="110" r="3" class="dot"/><circle cx="110" cy="110" r="3" class="dot"/><circle cx="165" cy="110" r="3" class="dot"/><circle cx="235" cy="110" r="3" class="dot"/><circle cx="315" cy="110" r="3" class="dot"/><circle cx="380" cy="110" r="3" class="dot"/>
+  <text x="20" y="144" class="label">channel D</text>
+  <line x1="20" y1="150" x2="460" y2="150" class="track"/>
+  <circle cx="70" cy="150" r="3" class="dot"/><circle cx="135" cy="150" r="3" class="dot"/><circle cx="200" cy="150" r="3" class="dot"/><circle cx="270" cy="150" r="3" class="dot"/><circle cx="335" cy="150" r="3" class="dot"/><circle cx="390" cy="150" r="3" class="dot"/>
+  <line x1="410" y1="20" x2="410" y2="180" class="col"/>
+  <circle cx="410" cy="30" r="4" class="aligned"/><circle cx="410" cy="70" r="4" class="aligned"/><circle cx="410" cy="110" r="4" class="aligned"/><circle cx="410" cy="150" r="4" class="aligned"/>
+  <rect x="374" y="195" width="72" height="18" rx="9" class="pill"/>
+  <text x="410" y="208" text-anchor="middle" class="pill-label">aligned</text>
+</svg>

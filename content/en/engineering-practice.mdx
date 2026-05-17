@@ -1,0 +1,20 @@
+export const meta = {
+  section_id: 'engineering-practice',
+  tone_profile: 'declarative-1ps',
+  invariants: [
+    '3 columns: AI Review Loop / Operator / Transferable Systems',
+    'NO postmortem section (H-10)',
+  ],
+}
+
+{/*
+  H-10: no resurrected debugging-war-story / postmortem narrative.
+  Three columns describe operating posture in declarative voice only.
+*/}
+
+<Section id="engineering-practice" toneProfile="declarative-1ps">
+  <Slot name="practice-lede" role="Section lede (Stage 7)" />
+  <Slot name="practice-col-1" role="AI Review Loop column (Stage 7)" />
+  <Slot name="practice-col-2" role="Operator column (Stage 7)" />
+  <Slot name="practice-col-3" role="Transferable Systems column (Stage 7)" />
+</Section>

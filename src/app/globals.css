@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* GENERATED:THEME-TOKENS:START — DO NOT EDIT. Run `npm run sync:css-tokens` to regenerate from src/lib/theme-tokens.ts */
+    --color-bg: #F6F8FB;
+    --color-bg-elevated: #FFFFFF;
+    --color-bg-subtle: #EEF3F7;
+    --color-fg: #0B1220;
+    --color-fg-muted: #243244;
+    --color-fg-subtle: #526173;
+    --color-border: #D8E1EA;
+    --color-border-strong: #AEBBCC;
+    --color-accent: #007C9E;
+    --color-accent-dim: #005F78;
+    --color-accent-bg: rgba(0, 124, 158, 0.1);
+    --shadow-surface: 0 1px 2px rgba(15, 23, 42, 0.05), 0 4px 14px rgba(15, 23, 42, 0.04);
+
+    --motion-fast: 120ms;
+    --motion-medium: 240ms;
+    --motion-slow: 480ms;
+    --motion-ease: cubic-bezier(0.4, 0.0, 0.2, 1);
+    /* GENERATED:THEME-TOKENS:END */
+  }
+
+  html {
+    color-scheme: light;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-pretendard, system-ui), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: #FFFFFF;
+  }
+
+  svg {
+    color: var(--color-fg);
+  }
+
+  /* Spec §10 — honor user motion preference (Stage 6 visual assets must respect this) */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+
+@layer components {
+  .skip-link { position: fixed; left: 1rem; top: 1rem; z-index: 100; transform: translateY(-150%); border: 1px solid var(--color-border-strong); border-radius: 0.25rem; background: var(--color-bg-elevated); color: var(--color-fg); padding: 0.5rem 0.75rem; font-size: 0.875rem; box-shadow: var(--shadow-surface); transition: transform var(--motion-fast) var(--motion-ease); }
+  .skip-link:focus { transform: translateY(0); outline: 2px solid var(--color-accent); outline-offset: 2px; }
+}

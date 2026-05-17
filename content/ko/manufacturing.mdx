@@ -1,0 +1,21 @@
+export const meta = {
+  section_id: 'manufacturing',
+  tone_profile: 'proposal-1ps',
+  invariants: [
+    'V-06 bidirectional substrate',
+    '6a (4 cards) — 로봇 제조 Foundation 데이터',
+    '6b (4 cards) — 기존 제조업 AI 워크플로우',
+    'each card: 의존 Primitive 태그',
+  ],
+}
+
+{/* AOR-3 / Y-03: §6 은 *제안형* 이지 경험 단정형 아님. 과거-단정 어휘 (만/구/운 + ㅓㅆ다 류) 절대 금지. */}
+
+<Section id="manufacturing" toneProfile="proposal-1ps">
+  <Slot name="manufacturing-lede" role="섹션 도입 — 제안형 (Stage 7)" />
+  <BidirSubstrateSlot v="V-06" />
+  <Slot name="6a-header" role="6a 헤더 — 로봇 제조 Foundation 데이터 (Stage 7)" />
+  <Slot name="6a-cards" role="6a — 4 카드, 의존 Primitive 태그 (Stage 5·7)" />
+  <Slot name="6b-header" role="6b 헤더 — 기존 제조업 AI 워크플로우 (Stage 7)" />
+  <Slot name="6b-cards" role="6b — 4 카드, 의존 Primitive 태그 (Stage 5·7)" />
+</Section>

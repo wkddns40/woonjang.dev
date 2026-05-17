@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" role="img" aria-labelledby="title">
+  <title id="title">Fragment-to-reassembly: sparse arrival fragments, mask bitmap, and reassembled signal.</title>
+  <style>
+    .axis{stroke:#D8E1EA;stroke-width:1}.tick{fill:#526173;font-size:9px}.frag{fill:#243244}.mask-on{fill:#526173;opacity:.72}.mask-off{fill:#fff;stroke:#D8E1EA;stroke-width:.5}.line{stroke:#007C9E;stroke-width:1.5;fill:none}.label{fill:#243244;font-size:10px}.vocab{fill:#526173;font-size:9px;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.1em}
+  </style>
+  <line x1="20" y1="40" x2="460" y2="40" class="axis"/>
+  <text x="20" y="30" class="tick">t0</text>
+  <text x="450" y="30" class="tick">tn</text>
+  <text x="20" y="55" class="label">arrival fragments</text>
+  <rect x="20" y="60" width="20" height="16" class="frag"/>
+  <rect x="44" y="60" width="20" height="16" class="frag"/>
+  <rect x="92" y="60" width="20" height="16" class="frag"/>
+  <rect x="164" y="60" width="20" height="16" class="frag"/>
+  <rect x="188" y="60" width="20" height="16" class="frag"/>
+  <rect x="212" y="60" width="20" height="16" class="frag"/>
+  <rect x="260" y="60" width="20" height="16" class="frag"/>
+  <rect x="308" y="60" width="20" height="16" class="frag"/>
+  <rect x="332" y="60" width="20" height="16" class="frag"/>
+  <rect x="380" y="60" width="20" height="16" class="frag"/>
+  <rect x="404" y="60" width="20" height="16" class="frag"/>
+  <rect x="428" y="60" width="20" height="16" class="frag"/>
+  <text x="20" y="110" class="label">mask bitmap</text>
+  <rect x="20" y="120" width="20" height="16" class="mask-on"/>
+  <rect x="44" y="120" width="20" height="16" class="mask-on"/>
+  <rect x="68" y="120" width="20" height="16" class="mask-off"/>
+  <rect x="92" y="120" width="20" height="16" class="mask-on"/>
+  <rect x="116" y="120" width="20" height="16" class="mask-off"/>
+  <rect x="140" y="120" width="20" height="16" class="mask-off"/>
+  <rect x="164" y="120" width="20" height="16" class="mask-on"/>
+  <rect x="188" y="120" width="20" height="16" class="mask-on"/>
+  <rect x="212" y="120" width="20" height="16" class="mask-on"/>
+  <rect x="236" y="120" width="20" height="16" class="mask-off"/>
+  <rect x="260" y="120" width="20" height="16" class="mask-on"/>
+  <rect x="284" y="120" width="20" height="16" class="mask-off"/>
+  <rect x="308" y="120" width="20" height="16" class="mask-on"/>
+  <rect x="332" y="120" width="20" height="16" class="mask-on"/>
+  <rect x="356" y="120" width="20" height="16" class="mask-off"/>
+  <rect x="380" y="120" width="20" height="16" class="mask-on"/>
+  <rect x="404" y="120" width="20" height="16" class="mask-on"/>
+  <rect x="428" y="120" width="20" height="16" class="mask-on"/>
+  <text x="20" y="170" class="label">reassembled signal</text>
+  <path d="M20 195 L32 195 L56 192 L80 190 L104 188 L128 187 L152 188 L176 190 L200 192 L224 195 L248 198 L272 202 L296 203 L320 203 L344 202 L368 199 L392 196 L416 193 L440 191 L460 195" class="line"/>
+  <text x="20" y="225" class="vocab">CAN ISO-TP / ROS2 / OPC-UA</text>
+</svg>

@@ -1,0 +1,46 @@
+{
+  "name": "woon-dev",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "tsx scripts/sync-css-tokens.ts --check && tsx scripts/sync-machine-readable.ts --check && tsx scripts/check-i18n-mirror.ts",
+    "build": "next build",
+    "postbuild": "node scripts/prune-static-client-js.mjs && node scripts/assert-static-output.mjs",
+    "start:out": "node scripts/serve-static-out.mjs",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check:i18n": "tsx scripts/check-i18n-mirror.ts",
+    "check:machine-readable": "tsx scripts/sync-machine-readable.ts --check",
+    "sync:css-tokens": "tsx scripts/sync-css-tokens.ts",
+    "sync:machine-readable": "tsx scripts/sync-machine-readable.ts",
+    "assert:static-output": "node scripts/assert-static-output.mjs",
+    "audit:assets": "node scripts/audit-public-assets.mjs",
+    "build:font": "node scripts/subset-pretendard.mjs",
+    "build:og-fonts": "node scripts/subset-og-fonts.mjs",
+    "verify:deploy": "node scripts/verify-deploy.mjs",
+    "verify:local": "node scripts/verify-local.mjs"
+  },
+  "dependencies": {
+    "next": "15.5.18",
+    "react": "19.2.5",
+    "react-dom": "19.2.5"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.5",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^15.1.6",
+    "postcss": "8.5.13",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.3"
+  },
+  "overrides": {
+    "postcss": "8.5.13"
+  }
+}

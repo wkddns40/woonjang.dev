@@ -1,0 +1,10 @@
+* text=auto
+public/profile.json text eol=lf
+
+*.pdf binary
+*.woff2 binary
+*.otf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary

@@ -1,0 +1,27 @@
+export const meta = {
+  section_id: 'proof-case-b',
+  tone_profile: 'solo-1ps',
+  invariants: [
+    'SoloScopeBanner (Y-02 visible)',
+    'V-02 5-stage',
+    '5 cards: plan / design / build / deploy / operate',
+  ],
+}
+
+<Section id="proof-case-b" toneProfile="solo-1ps">
+  <SoloScopeBanner />
+  <Slot name="proof-b-lede" role="untamedai.me — solo full-stack intro (Stage 7)" />
+  <FiveStageSlot v="V-02" />
+  <Slot name="proof-b-stage-1" role="Plan card (Stage 7)" />
+  <Slot name="proof-b-stage-2" role="Design card (Stage 7)" />
+  <Slot name="proof-b-stage-3" role="Build card — stack (Stage 7·8)" />
+  <TodoWoonInline token="proof-b/stack-frontend" hiddenWhenUnset />
+  <TodoWoonInline token="proof-b/stack-backend" hiddenWhenUnset />
+  <TodoWoonInline token="proof-b/stack-db" hiddenWhenUnset />
+  <TodoWoonInline token="proof-b/stack-hosting" hiddenWhenUnset />
+  <TodoWoonInline token="proof-b/stack-llm" hiddenWhenUnset />
+  <TodoWoonInline token="proof-b/stack-payments" hiddenWhenUnset />
+  <Slot name="proof-b-stage-4" role="Deploy card (Stage 7)" />
+  <Slot name="proof-b-stage-5" role="Operate card — optional metrics (Stage 7·8)" />
+  <TodoWoonInline token="proof-b/metric-snapshot" hiddenWhenUnset />
+</Section>

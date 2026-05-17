@@ -1,0 +1,19 @@
+export const meta = {
+  section_id: 'primitives',
+  tone_profile: 'declarative-1ps',
+  invariants: [
+    '3 cards: P1 / P2 / P3',
+    'each card 3 sub-blocks: verified env / robotics manufacturing / existing manufacturing',
+    'V-03 / V-04 / V-05 visuals',
+  ],
+}
+
+<Section id="primitives" toneProfile="declarative-1ps">
+  <Slot name="primitives-lede" role="Section lede (Stage 7)" />
+  <Slot name="P1-card" role="P1 — verified / robotics / existing 3 blocks (Stage 5·7)" />
+  <PrimitiveAssemblySlot v="V-03" />
+  <Slot name="P2-card" role="P2 — verified / robotics / existing 3 blocks (Stage 5·7)" />
+  <PrimitiveAlignmentSlot v="V-04" />
+  <Slot name="P3-card" role="P3 — verified / robotics / existing 3 blocks (Stage 5·7)" />
+  <PrimitiveSchemaSlot v="V-05" />
+</Section>

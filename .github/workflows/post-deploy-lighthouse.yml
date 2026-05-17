@@ -1,0 +1,60 @@
+name: Post-deploy Lighthouse
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: Production URL to verify.
+        required: false
+        default: https://woonjang.dev
+      expected_build_id:
+        description: Optional 12-char Next build id. Defaults to this workflow commit.
+        required: false
+
+concurrency:
+  group: post-deploy-lighthouse-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    name: Verify live deploy and Lighthouse
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      BASE_URL: ${{ github.event.inputs.base_url || 'https://woonjang.dev' }}
+      EXPECTED_BUILD_ID: ${{ github.event.inputs.expected_build_id || github.sha }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Wait for Cloudflare Pages production build
+        env:
+          WAIT_TIMEOUT_SECONDS: 900
+          WAIT_INTERVAL_SECONDS: 15
+        run: node scripts/wait-for-live-build.mjs "$BASE_URL" "$EXPECTED_BUILD_ID"
+
+      - name: Verify live deploy contract
+        run: npm run verify:deploy -- "$BASE_URL"
+
+      - name: Run Lighthouse CI
+        run: npx -y @lhci/cli@0.15.1 autorun --config=./lighthouserc.cjs
+
+      - name: Upload Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci
+          if-no-files-found: ignore

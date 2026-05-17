@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-labelledby="title">
+  <title id="title">Dual-purpose data substrate — the same store serves production reads (inference, dashboards, alerts) and batch exports for training (RLDS, Parquet, MCAP).</title>
+  <style>
+    .pipe{fill:#fff;stroke:#AEBBCC;stroke-width:1.25}.core{fill:rgba(0,124,158,.1);stroke:#007C9E;stroke-width:1.25}.pipe-label{fill:#0B1220;font-size:12px;font-weight:500}.core-label{fill:#007C9E;font-size:11px;font-weight:600}.flow-up{stroke:#526173;stroke-width:1.2;fill:none;stroke-dasharray:4 4;animation:up 3s linear infinite}.flow-down{stroke:#526173;stroke-width:1.2;fill:none;stroke-dasharray:4 4;animation:down 3s linear infinite}@keyframes up{from{stroke-dashoffset:0}to{stroke-dashoffset:16}}@keyframes down{from{stroke-dashoffset:0}to{stroke-dashoffset:-16}}.section{fill:#243244;font-size:11px;letter-spacing:.15em;text-transform:uppercase}.badge{fill:#fff;stroke:#AEBBCC}.badge-label{fill:#0B1220;font-size:11px;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}@media (prefers-reduced-motion:reduce){.flow-up,.flow-down{animation:none}}
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#526173"/>
+    </marker>
+  </defs>
+  <text x="300" y="40" text-anchor="middle" class="section">production</text>
+  <rect x="80" y="50" width="80" height="32" rx="4" class="badge"/><text x="120" y="70" text-anchor="middle" class="badge-label">inference</text>
+  <rect x="260" y="50" width="80" height="32" rx="4" class="badge"/><text x="300" y="70" text-anchor="middle" class="badge-label">dashboards</text>
+  <rect x="440" y="50" width="80" height="32" rx="4" class="badge"/><text x="480" y="70" text-anchor="middle" class="badge-label">alerts</text>
+  <path d="M120 90 L120 130" class="flow-up" marker-start="url(#arrow)"/><path d="M300 90 L300 130" class="flow-up" marker-start="url(#arrow)"/><path d="M480 90 L480 130" class="flow-up" marker-start="url(#arrow)"/>
+  <rect x="40" y="140" width="520" height="40" rx="6" class="pipe"/>
+  <text x="200" y="165" text-anchor="middle" class="pipe-label">substrate</text>
+  <rect x="260" y="146" width="92" height="28" rx="4" class="core"/>
+  <text x="306" y="164" text-anchor="middle" class="core-label">pipeline</text>
+  <path d="M200 190 L200 230" class="flow-down" marker-end="url(#arrow)"/><path d="M300 190 L300 230" class="flow-down" marker-end="url(#arrow)"/><path d="M400 190 L400 230" class="flow-down" marker-end="url(#arrow)"/>
+  <rect x="160" y="240" width="80" height="32" rx="4" class="badge"/><text x="200" y="260" text-anchor="middle" class="badge-label">RLDS</text>
+  <rect x="260" y="240" width="80" height="32" rx="4" class="badge"/><text x="300" y="260" text-anchor="middle" class="badge-label">Parquet</text>
+  <rect x="360" y="240" width="80" height="32" rx="4" class="badge"/><text x="400" y="260" text-anchor="middle" class="badge-label">MCAP</text>
+  <text x="300" y="295" text-anchor="middle" class="section">training data</text>
+</svg>

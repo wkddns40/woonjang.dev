@@ -1,0 +1,27 @@
+export const meta = {
+  section_id: 'proof-case-b',
+  tone_profile: 'solo-1ps',
+  invariants: [
+    'SoloScopeBanner (Y-02 visible)',
+    'V-02 5-stage',
+    '5 cards: 기획 / 설계 / 개발 / 배포 / 운영',
+  ],
+}
+
+<Section id="proof-case-b" toneProfile="solo-1ps">
+  <SoloScopeBanner />
+  <Slot name="proof-b-lede" role="untamedai.me — 1인 풀스택 도입 (Stage 7)" />
+  <FiveStageSlot v="V-02" />
+  <Slot name="proof-b-stage-1" role="기획 카드 (Stage 7)" />
+  <Slot name="proof-b-stage-2" role="설계 카드 (Stage 7)" />
+  <Slot name="proof-b-stage-3" role="개발 카드 — 스택 (Stage 7·8)" />
+  <TodoWoonInline token="proof-b/stack-frontend" hiddenWhenUnset />
+  <TodoWoonInline token="proof-b/stack-backend" hiddenWhenUnset />
+  <TodoWoonInline token="proof-b/stack-db" hiddenWhenUnset />
+  <TodoWoonInline token="proof-b/stack-hosting" hiddenWhenUnset />
+  <TodoWoonInline token="proof-b/stack-llm" hiddenWhenUnset />
+  <TodoWoonInline token="proof-b/stack-payments" hiddenWhenUnset />
+  <Slot name="proof-b-stage-4" role="배포 카드 (Stage 7)" />
+  <Slot name="proof-b-stage-5" role="운영 카드 — 메트릭 선택 (Stage 7·8)" />
+  <TodoWoonInline token="proof-b/metric-snapshot" hiddenWhenUnset />
+</Section>

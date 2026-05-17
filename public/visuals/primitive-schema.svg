@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" role="img" aria-labelledby="title">
+  <title id="title">Heterogeneous device interfaces adapted into canonical telemetry events using a schema registry contract.</title>
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L6 3 L0 6 z" fill="#526173"/>
+    </marker>
+  </defs>
+  <style>
+    .panel{fill:#fff;stroke:#AEBBCC;stroke-width:1}.soft{fill:#EEF3F7;stroke:#D8E1EA;stroke-width:1}.registry{fill:rgba(0,124,158,.1);stroke:#007C9E;stroke-width:1.25}.adapter{fill:#fff;stroke:#526173;stroke-width:1}.flow{stroke:#526173;stroke-width:1.1;fill:none;marker-end:url(#arrow)}.consult{stroke:#007C9E;stroke-width:1;stroke-dasharray:3 3;fill:none;marker-end:url(#arrow);opacity:.85}.title{fill:#243244;font-size:10px;font-weight:600;letter-spacing:.08em}.label{fill:#243244;font-size:10px;font-weight:500}.detail{fill:#526173;font-size:8.5px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}.reg-label{fill:#007C9E;font-size:11px;font-weight:600;letter-spacing:.04em}.reg-sub{fill:#526173;font-size:8.5px;letter-spacing:.06em}.reg-key{fill:#243244;font-size:9px;font-weight:500;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}.reg-val{fill:#526173;font-size:8.5px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}.adapter-label{fill:#243244;font-size:11px;font-weight:600;letter-spacing:.08em}.adapter-sub{fill:#526173;font-size:8.5px;letter-spacing:.04em}.cell{fill:#243244;font-size:8.5px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}.muted{fill:#526173;font-size:8.5px;letter-spacing:.08em}.divider{stroke:#007C9E;stroke-width:.75;opacity:.5}.consult-label{fill:#526173;font-size:7.5px;letter-spacing:.1em;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+  </style>
+  <rect x="80" y="8" width="400" height="58" rx="6" class="registry"/>
+  <text x="280" y="22" text-anchor="middle" class="reg-label">schema registry</text>
+  <text x="280" y="33" text-anchor="middle" class="reg-sub">adapter-facing contract / lookup, not a pipe</text>
+  <line x1="96" y1="40" x2="464" y2="40" class="divider"/>
+  <text x="142" y="52" text-anchor="middle" class="reg-key">device_id</text><text x="142" y="62" text-anchor="middle" class="reg-val">asset key</text>
+  <text x="234" y="52" text-anchor="middle" class="reg-key">metric_map</text><text x="234" y="62" text-anchor="middle" class="reg-val">src-signal</text>
+  <text x="326" y="52" text-anchor="middle" class="reg-key">unit_rule</text><text x="326" y="62" text-anchor="middle" class="reg-val">raw-SI</text>
+  <text x="418" y="52" text-anchor="middle" class="reg-key">schema_ver</text><text x="418" y="62" text-anchor="middle" class="reg-val">v3 pinned</text>
+  <path d="M280 66 L280 78 L240 78 L240 88" class="consult"/>
+  <text x="246" y="76" class="consult-label">consults</text>
+  <text x="24" y="80" class="title">RAW SOURCES</text>
+  <text x="336" y="80" class="title">CANONICAL EVENTS</text>
+  <rect x="24" y="92" width="120" height="24" rx="3" class="panel"/><text x="36" y="103" class="label">ROS2 topic</text><text x="36" y="112" class="detail">/joint_states</text><path d="M144 104 L200 104" class="flow"/>
+  <rect x="24" y="120" width="120" height="24" rx="3" class="panel"/><text x="36" y="131" class="label">OPC-UA node</text><text x="36" y="140" class="detail">ns=2;s=Temp</text><path d="M144 132 L200 132" class="flow"/>
+  <rect x="24" y="148" width="120" height="24" rx="3" class="panel"/><text x="36" y="159" class="label">PLC register</text><text x="36" y="168" class="detail">D400 speed</text><path d="M144 160 L200 160" class="flow"/>
+  <rect x="24" y="176" width="120" height="24" rx="3" class="panel"/><text x="36" y="187" class="label">CAN frame</text><text x="36" y="196" class="detail">0x18FF50E5 SOC</text><path d="M144 188 L200 188" class="flow"/>
+  <rect x="200" y="92" width="80" height="108" rx="6" class="adapter"/>
+  <text x="240" y="142" text-anchor="middle" class="adapter-label">ADAPTER</text>
+  <text x="240" y="156" text-anchor="middle" class="adapter-sub">schema-driven</text>
+  <text x="240" y="167" text-anchor="middle" class="adapter-sub">decoder</text>
+  <path d="M280 104 L336 104" class="flow"/><rect x="336" y="92" width="200" height="24" rx="3" class="panel"/><text x="346" y="103" class="cell">08:41:03</text><text x="396" y="103" class="cell">arm-07</text><text x="438" y="103" class="cell">joint.pos</text><text x="526" y="103" text-anchor="end" class="cell">1.42</text><text x="346" y="112" class="detail">unit=rad / quality=ok</text>
+  <path d="M280 132 L336 132" class="flow"/><rect x="336" y="120" width="200" height="24" rx="3" class="panel"/><text x="346" y="131" class="cell">08:41:04</text><text x="396" y="131" class="cell">cell-02</text><text x="438" y="131" class="cell">temp</text><text x="526" y="131" text-anchor="end" class="cell">72.4</text><text x="346" y="140" class="detail">unit=C / quality=ok</text>
+  <path d="M280 160 L336 160" class="flow"/><rect x="336" y="148" width="200" height="24" rx="3" class="panel"/><text x="346" y="159" class="cell">08:41:05</text><text x="396" y="159" class="cell">line-3</text><text x="438" y="159" class="cell">speed</text><text x="526" y="159" text-anchor="end" class="cell">1.8</text><text x="346" y="168" class="detail">unit=m/s / quality=warn</text>
+  <path d="M280 188 L336 188" class="flow"/><rect x="336" y="176" width="200" height="24" rx="3" class="panel"/><text x="346" y="187" class="cell">08:41:06</text><text x="396" y="187" class="cell">veh-12</text><text x="438" y="187" class="cell">soc</text><text x="526" y="187" text-anchor="end" class="cell">81</text><text x="346" y="196" class="detail">unit=% / quality=ok</text>
+  <rect x="24" y="212" width="512" height="28" rx="3" class="soft"/>
+  <text x="38" y="230" class="muted">result: one query model for ops dashboards, batch features, replay datasets, and RAG over logs</text>
+</svg>

@@ -1,0 +1,21 @@
+export const meta = {
+  section_id: 'manufacturing',
+  tone_profile: 'proposal-1ps',
+  invariants: [
+    'V-06 bidirectional substrate',
+    '6a (4 cards) — robotics manufacturing foundation data',
+    '6b (4 cards) — existing-manufacturing AI workflow',
+    'each card: dependency Primitive tag',
+  ],
+}
+
+{/* AOR-3 / Y-03: §6 is *proposal* tone, not lived-experience. Past-tense lived-experience verbs forbidden — see brief v2 §8 IP guard. */}
+
+<Section id="manufacturing" toneProfile="proposal-1ps">
+  <Slot name="manufacturing-lede" role="Section lede — proposal voice (Stage 7)" />
+  <BidirSubstrateSlot v="V-06" />
+  <Slot name="6a-header" role="6a header — robotics manufacturing foundation data (Stage 7)" />
+  <Slot name="6a-cards" role="6a — 4 cards, Primitive dependency tags (Stage 5·7)" />
+  <Slot name="6b-header" role="6b header — existing-manufacturing AI workflow (Stage 7)" />
+  <Slot name="6b-cards" role="6b — 4 cards, Primitive dependency tags (Stage 5·7)" />
+</Section>

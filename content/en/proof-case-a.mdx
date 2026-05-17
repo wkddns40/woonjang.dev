@@ -1,0 +1,20 @@
+export const meta = {
+  section_id: 'proof-case-a',
+  tone_profile: 'team-1pp',
+  invariants: [
+    'TeamScopeBanner (Y-01 visible)',
+    'V-07 4-tier diagram',
+    'placeholder tokens hidden when unset',
+  ],
+}
+
+{/* AOR-3 / Y-01: §4 (EV fleet) is team work — first-person plural with explicit own-contribution. */}
+
+<Section id="proof-case-a" toneProfile="team-1pp">
+  <TeamScopeBanner />
+  <Slot name="proof-a-lede" role="EV fleet telemetry — team work intro (Stage 7)" />
+  <FourTierDiagramSlot v="V-07" />
+  <Slot name="proof-a-body" role="4-tier ingest description + own-contribution module (Stage 7)" />
+  <TodoWoonInline token="proof-a/own-contribution" hiddenWhenUnset />
+  <TodoWoonInline token="proof-a/operation-period" hiddenWhenUnset />
+</Section>

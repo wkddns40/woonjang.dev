@@ -1,0 +1,19 @@
+export const meta = {
+  section_id: 'primitives',
+  tone_profile: 'declarative-1ps',
+  invariants: [
+    '3 cards: P1 / P2 / P3',
+    'each card 3 sub-blocks: 검증된 환경 / 로봇 제조에 적용 / 기존 제조업에 적용',
+    'V-03 / V-04 / V-05 visuals',
+  ],
+}
+
+<Section id="primitives" toneProfile="declarative-1ps">
+  <Slot name="primitives-lede" role="섹션 도입 (Stage 7)" />
+  <Slot name="P1-card" role="P1 — 검증환경 / 로봇 / 기존 3블록 (Stage 5·7)" />
+  <PrimitiveAssemblySlot v="V-03" />
+  <Slot name="P2-card" role="P2 — 검증환경 / 로봇 / 기존 3블록 (Stage 5·7)" />
+  <PrimitiveAlignmentSlot v="V-04" />
+  <Slot name="P3-card" role="P3 — 검증환경 / 로봇 / 기존 3블록 (Stage 5·7)" />
+  <PrimitiveSchemaSlot v="V-05" />
+</Section>

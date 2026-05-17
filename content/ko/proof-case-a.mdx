@@ -1,0 +1,20 @@
+export const meta = {
+  section_id: 'proof-case-a',
+  tone_profile: 'team-1pp',
+  invariants: [
+    'TeamScopeBanner (Y-01 visible)',
+    'V-07 4-tier diagram',
+    'placeholder tokens hidden when unset',
+  ],
+}
+
+{/* AOR-3 / Y-01: §4 (EV fleet) 는 1인칭 복수 + 본인 기여 명시. 컴포넌트명 / 배너로 구조 강제. */}
+
+<Section id="proof-case-a" toneProfile="team-1pp">
+  <TeamScopeBanner />
+  <Slot name="proof-a-lede" role="EV fleet 텔레메트리 — 팀 작업 도입 (Stage 7)" />
+  <FourTierDiagramSlot v="V-07" />
+  <Slot name="proof-a-body" role="4-tier ingest 서술 + 본인 기여 모듈 (Stage 7)" />
+  <TodoWoonInline token="proof-a/own-contribution" hiddenWhenUnset />
+  <TodoWoonInline token="proof-a/operation-period" hiddenWhenUnset />
+</Section>

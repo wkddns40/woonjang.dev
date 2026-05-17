@@ -1,0 +1,14 @@
+export const meta = {
+  section_id: 'about',
+  tone_profile: 'personal-1ps',
+  invariants: ['1 paragraph + 4 links: GitHub / untamedai.me / Email / Resume PDF'],
+}
+
+<Section id="about" toneProfile="personal-1ps">
+  <Slot name="about-paragraph" role="자기 소개 한 단락 (Stage 7)" />
+  <Slot name="about-links" role="4 링크 (Stage 8·9)">
+    <TodoWoonInline token="about/github-url" hiddenWhenUnset />
+    <TodoWoonInline token="about/email" hiddenWhenUnset />
+    <TodoWoonInline token="about/resume-pdf" hiddenWhenUnset />
+  </Slot>
+</Section>
